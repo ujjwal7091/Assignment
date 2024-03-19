@@ -18,7 +18,7 @@ function fetchData() {
     const pageSize = 7; 
     const sortBy = 'publishedAt';
     let query="india";
-    fetch(`${url}${query}&pageSize=${pageSize}&sortBy=${sortBy}&apikey=${ApiKey}`)
+    window.fetch(`${url}${query}&pageSize=${pageSize}&sortBy=${sortBy}&apikey=${ApiKey}`)
     .then(response => response.json())
     .then(data => {
     date.innerHTML+=` ${ data.articles[0].publishedAt}`;
